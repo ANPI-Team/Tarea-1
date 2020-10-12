@@ -10,7 +10,17 @@
 
 int main(int argc, const char * argv[]) {
     
-    std::cout << "" <<std::endl;
+    // funTras *pfun = new funTras();
+    
+    std::cout << "Factorial" <<std::endl;
+    double value = funTras::factorial(5);
+    std::cout << value <<std::endl;
+    
+    
+    std::cout << "DivT" <<std::endl;
+    double valueDiv = funTras::divT(3);
+    std::cout << valueDiv <<std::endl;
+    
     
     
     

@@ -1,35 +1,62 @@
 #include "FunTras.hpp"
 #include <stdlib.h>
+#include <iostream>
+#include <cmath>
 
-double FunTras::DivT(double x)
-{   
-    return FunTras::DivAux(0.1, x, 0);
-}
-double FunTras::DivAux(double x, double a, int iteration)
+unsigned long long funTras::factorial(int n)
 {
-    double xNext = x * (2 - a * x);
-    if((abs(xNext - x) < FunTras::TOLERANCE) || iteration >= FunTras::MAXITERATION)
-    {
-        return x;
-    }else
-    {
-        FunTras::DivAux(xNext,a,iteration++);
-    }
-    return NULL;
+    if(n < 0)
+        return 0;
+    else if(n > 1)
+        return n*funTras::factorial(n-1);
+    return 1;
+    
 }
-double FunTras::DivT(int x)
-{   
-    return FunTras::DivAux(0.1, x, 0);
-}
-double FunTras::DivAux(double x, int a, int iteration)
+
+double funTras::divT(int a)
 {
-    double xNext = x * (2 - a * x);
-    if((abs(xNext - x) < FunTras::TOLERANCE) || iteration >= FunTras::MAXITERATION)
+    double x = funTras::divTInitialValue(a);
+    double xNext = x * (2 - a * x);;
+    int iteration = 0;
+    
+    while(!(abs(xNext - x) < funTras::TOLERANCE) || iteration < funTras::MAXITERATION)
     {
-        return x;
-    }else
-    {
-        FunTras::DivAux(xNext,a,iteration++);
+
+        double temp = xNext;
+        xNext = x * (2 - a * x);
+        x = temp;
+        iteration++;
     }
-    return NULL;
+    return xNext;
 }
+
+double funTras::divTInitialValue(int a)
+{
+    double value = 0;
+    const double FACT100 = funTras::factorial(100);
+    const double FACT80 = funTras::factorial(80);
+    const double FACT60 = funTras::factorial(60);
+    const double FACT40 = funTras::factorial(40);
+    const double FACT20 = funTras::factorial(20);
+    const double FACT0 = funTras::factorial(0);
+    
+    std::cout << FACT100 <<std::endl;
+    std::cout << FACT80 <<std::endl;
+    std::cout << FACT60 <<std::endl;
+    std::cout << FACT40 <<std::endl;
+    std::cout << FACT20 <<std::endl;
+    std::cout << FACT0 <<std::endl;
+    
+    if(FACT80 <= a &&  a <= FACT100)
+        value = pow(funTras::EPS,15);
+    else if(FACT60 <= a &&  a <= FACT80)
+        value = pow(funTras::EPS,11);
+    else if(FACT40 <= a &&  a <= FACT60)
+        value = pow(funTras::EPS,8);
+    else if(FACT20 <= a &&  a <= FACT40)
+        value = pow(funTras::EPS,4);
+    else if(FACT0 <= a &&  a <= FACT20)
+        value = pow(funTras::EPS,2);
+    return value;
+}
+

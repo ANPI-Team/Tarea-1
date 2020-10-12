@@ -2,28 +2,31 @@
 #define FunTras_hpp
 
 #include <stdio.h>
+#include <cmath>
 
-class FunTras
+class funTras
 {
 private:
     static constexpr double TOLERANCE = 0.00000001;
     static const int MAXITERATION = 1000;
-
-    static double DivAux(double x, double a, int iterations);
-    static double DivAux(double x, int a, int iterations);
+    static constexpr double EPS = 0.000000000000002204;
+    
+    static double divTInitialValue(int a);
+    
+    
+    
 public:
+    static unsigned long long factorial(int n);
+    static double divT(int a);
 
-    static double DivT(double x);
-    static double DivT(int x);
+    static double expT(double x);
+    static double expT(int x);
 
-    static double ExpT(double x);
-    static double ExpT(int x);
+    static double sinT(double x);
+    static double sinT(int x);
 
-    static double SinT(double x);
-    static double SinT(int x);
-
-    static double CosT(double x);
-    static double CosT(int x);
+    static double cosT(double x);
+    static double cosT(int x);
 };
 
 #endif /* FunTras_hpp */
