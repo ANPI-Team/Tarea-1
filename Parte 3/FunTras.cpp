@@ -19,7 +19,7 @@ double funTras::divT(int a)
     double xNext = x * (2 - a * x);;
     int iteration = 0;
     
-    while(!(abs(xNext - x) < funTras::TOLERANCE) || iteration < funTras::MAXITERATION)
+    while(!(abs((xNext - x)/xNext) < funTras::TOLERANCE) || iteration < funTras::MAXITERATION)
     {
 
         double temp = xNext;
@@ -39,13 +39,6 @@ double funTras::divTInitialValue(int a)
     const double FACT40 = funTras::factorial(40);
     const double FACT20 = funTras::factorial(20);
     const double FACT0 = funTras::factorial(0);
-    
-    std::cout << FACT100 <<std::endl;
-    std::cout << FACT80 <<std::endl;
-    std::cout << FACT60 <<std::endl;
-    std::cout << FACT40 <<std::endl;
-    std::cout << FACT20 <<std::endl;
-    std::cout << FACT0 <<std::endl;
     
     if(FACT80 <= a &&  a <= FACT100)
         value = pow(funTras::EPS,15);
