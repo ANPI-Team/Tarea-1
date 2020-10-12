@@ -8,7 +8,7 @@ class funTras
 {
 private:
     static constexpr double TOLERANCE = 0.00000001;
-    static const int MAXITERATION = 1000;
+    static const int MAXITERATION = 2500;
     static constexpr double EPS = 0.000000000000002204;
     
     static double divTInitialValue(unsigned long long a);
@@ -27,6 +27,9 @@ public:
 
     static double cosT(double x);
     static double cosT(int x);
+    
+    static double tanT(double x);
+    static double tanT(int x);
 };
 
 #endif /* FunTras_hpp */

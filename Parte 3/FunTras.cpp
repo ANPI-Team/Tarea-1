@@ -147,3 +147,13 @@ double funTras::cosT(double a)
     }
     return value;
 }
+
+double funTras::tanT(int a)
+{
+    return sinT(a) * divT(cosT(a));
+}
+
+double funTras::tanT(double a)
+{
+    return sinT(a) * divT(cosT(a));
+}

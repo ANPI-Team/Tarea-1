@@ -33,6 +33,10 @@ int main(int argc, const char * argv[]) {
     double valueCos = funTras::cosT(0);
     std::cout << valueCos <<std::endl;
     
+    std::cout << "TanT" <<std::endl;
+    double valueTan = funTras::tanT(0);
+    std::cout << valueTan <<std::endl;
+    
     
     
     
