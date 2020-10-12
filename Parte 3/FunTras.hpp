@@ -40,6 +40,9 @@ public:
 //    static double rootT(int x, double a);
     static double rootT(double x, int a);
 //    static double rootT(double x, double a);
+    
+    static double sqrtT(int x);
+    static double sqrtT(double x);
 };
 
 #endif /* FunTras_hpp */

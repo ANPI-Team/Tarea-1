@@ -218,3 +218,13 @@ double funTras::rootT(double a, int p)
     }
     return x;
 }
+
+double funTras::sqrtT(int x)
+{
+    return funTras::rootT(x, 2);
+}
+
+double funTras::sqrtT(double x)
+{
+    return funTras::rootT(x, 2);
+}

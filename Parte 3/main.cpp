@@ -44,5 +44,9 @@ int main(int argc, const char * argv[]) {
     std::cout << "Root" <<std::endl;
     double valueRoot = funTras::rootT(4, 2);
     std::cout << valueRoot <<std::endl;
+    
+    std::cout << "Sqr" <<std::endl;
+    double valueSqr = funTras::sqrtT(4);
+    std::cout << valueSqr <<std::endl;
     return 0;
 }
