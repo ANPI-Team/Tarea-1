@@ -13,15 +13,14 @@ unsigned long long funTras::factorial(int n)
     
 }
 
-double funTras::divT(int a)
+double funTras::divT(unsigned long long a)
 {
     double x = funTras::divTInitialValue(a);
     double xNext = x * (2 - a * x);;
-    int iteration = 0;
+    int iteration = 1;
     
     while(!(abs((xNext - x)/xNext) < funTras::TOLERANCE) || iteration < funTras::MAXITERATION)
     {
-
         double temp = xNext;
         xNext = x * (2 - a * x);
         x = temp;
@@ -30,15 +29,15 @@ double funTras::divT(int a)
     return xNext;
 }
 
-double funTras::divTInitialValue(int a)
+double funTras::divTInitialValue(unsigned long long a)
 {
     double value = 0;
-    const double FACT100 = funTras::factorial(100);
-    const double FACT80 = funTras::factorial(80);
-    const double FACT60 = funTras::factorial(60);
-    const double FACT40 = funTras::factorial(40);
-    const double FACT20 = funTras::factorial(20);
-    const double FACT0 = funTras::factorial(0);
+    const unsigned long long FACT100 = funTras::factorial(100);
+    const unsigned long long FACT80 = funTras::factorial(80);
+    const unsigned long long FACT60 = funTras::factorial(60);
+    const unsigned long long FACT40 = funTras::factorial(40);
+    const unsigned long long FACT20 = funTras::factorial(20);
+    const unsigned long long FACT0 = funTras::factorial(0);
     
     if(FACT80 <= a &&  a <= FACT100)
         value = pow(funTras::EPS,15);
@@ -52,4 +51,34 @@ double funTras::divTInitialValue(int a)
         value = pow(funTras::EPS,2);
     return value;
 }
+
+double funTras::expT(double a)
+{
+    int iteration = 0;
+    double antValue = 0;
+    double value = 0;
+    while (!(abs(value - antValue) < funTras::TOLERANCE) || iteration < funTras::MAXITERATION)
+    {
+        antValue = value;
+        value += pow(a, iteration) * funTras::divT(factorial(iteration));
+    }
+    return value;
+}
+
+double funTras::expT(int a)
+{
+    int iteration = 0;
+    double antValue = 10;
+    double value = 0;
+    while (!((abs(value - antValue)) < funTras::TOLERANCE) && iteration < funTras::MAXITERATION)
+    {
+        antValue = value;
+        double term = pow(a, iteration) * funTras::divT(factorial(iteration));
+        value += term;
+
+        iteration++;
+    }
+    return value;
+}
+
 

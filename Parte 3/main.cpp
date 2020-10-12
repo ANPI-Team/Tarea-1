@@ -13,15 +13,17 @@ int main(int argc, const char * argv[]) {
     // funTras *pfun = new funTras();
     
     std::cout << "Factorial" <<std::endl;
-    double value = funTras::factorial(5);
-    std::cout << value <<std::endl;
+    double valueFct = funTras::factorial(5);
+    std::cout << valueFct <<std::endl;
     
     
     std::cout << "DivT" <<std::endl;
     double valueDiv = funTras::divT(3);
     std::cout << valueDiv <<std::endl;
     
-    
+    std::cout << "ExpT" <<std::endl;
+    double valueExp = funTras::expT(3);
+    std::cout << valueExp <<std::endl;
     
     
     

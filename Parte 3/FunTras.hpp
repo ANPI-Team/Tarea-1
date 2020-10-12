@@ -11,13 +11,13 @@ private:
     static const int MAXITERATION = 1000;
     static constexpr double EPS = 0.000000000000002204;
     
-    static double divTInitialValue(int a);
+    static double divTInitialValue(unsigned long long a);
     
     
     
 public:
     static unsigned long long factorial(int n);
-    static double divT(int a);
+    static double divT(unsigned long long a);
 
     static double expT(double x);
     static double expT(int x);
