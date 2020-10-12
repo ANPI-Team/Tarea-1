@@ -30,6 +30,16 @@ public:
     
     static double tanT(double x);
     static double tanT(int x);
+    
+    static double powerT(double x, double a);
+    static double powerT(int x, double a);
+    static double powerT(double x, int a);
+    static double powerT(int x, int a);
+    
+    static double rootT(int x, int a);
+    static double rootT(int x, double a);
+    static double rootT(double x, int a);
+    static double rootT(double x, double a);
 };
 
 #endif /* FunTras_hpp */

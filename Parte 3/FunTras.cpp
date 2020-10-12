@@ -10,7 +10,6 @@ unsigned long long funTras::factorial(int n)
     else if(n > 1)
         return n*funTras::factorial(n-1);
     return 1;
-    
 }
 
 double funTras::divT(unsigned long long a)
@@ -156,4 +155,38 @@ double funTras::tanT(int a)
 double funTras::tanT(double a)
 {
     return sinT(a) * divT(cosT(a));
+}
+
+double funTras::powerT(double x, double a)
+{
+    int intX = (int) x;
+    double floatX = x - intX;
+    return funTras::powerT(intX, a) * funTras::rootT(a,divT(floatX));
+}
+double funTras::powerT(int x, double a)
+{
+    double value = 1;
+    while(x > 0)
+    {
+        value *= a;
+        x--;
+    }
+    return value;
+}
+double funTras::powerT(double x, int a)
+{
+    int intX = (int) x;
+    double floatX = x - intX;
+    return funTras::powerT(intX, a) * funTras::rootT(a,divT(floatX));
+}
+
+double funTras::powerT(int x, int a)
+{
+    int value = 1;
+    while(x > 0)
+    {
+        value *= a;
+        x--;
+    }
+    return value;
 }

@@ -37,10 +37,9 @@ int main(int argc, const char * argv[]) {
     double valueTan = funTras::tanT(0);
     std::cout << valueTan <<std::endl;
     
-    
-    
-    
-    
+    std::cout << "Pw" <<std::endl;
+    double valuePw = funTras::powerT(0, 20);
+    std::cout << valuePw <<std::endl;
     
     return 0;
 }
