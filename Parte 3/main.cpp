@@ -25,6 +25,9 @@ int main(int argc, const char * argv[]) {
     double valueExp = funTras::expT(3);
     std::cout << valueExp <<std::endl;
     
+    std::cout << "SinT" <<std::endl;
+    double valueSin = funTras::sinT(3.145/2);
+    std::cout << valueSin <<std::endl;
     
     
     
