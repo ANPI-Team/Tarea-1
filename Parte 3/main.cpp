@@ -41,5 +41,8 @@ int main(int argc, const char * argv[]) {
     double valuePw = funTras::powerT(0, 20);
     std::cout << valuePw <<std::endl;
     
+    std::cout << "Root" <<std::endl;
+    double valueRoot = funTras::rootT(4, 2);
+    std::cout << valueRoot <<std::endl;
     return 0;
 }

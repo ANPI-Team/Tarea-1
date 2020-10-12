@@ -190,3 +190,31 @@ double funTras::powerT(int x, int a)
     }
     return value;
 }
+
+double funTras::rootT(int a, int p)
+{
+    double x = a * funTras::divT(2);
+    double antX = 0;
+    int iteration = 0;
+    while (!(abs((x - antX)/x) < funTras::TOLERANCE) && iteration < funTras::MAXITERATION)
+    {
+        antX = x;
+        x = x - (powerT(p, x) - a) * divT(p*x);
+        iteration++;
+    }
+    return x;
+}
+
+double funTras::rootT(double a, int p)
+{
+    double x = a * funTras::divT(2);
+    double antX = 0;
+    int iteration = 0;
+    while (!(abs((x - antX)/x) < funTras::TOLERANCE) && iteration < funTras::MAXITERATION)
+    {
+        antX = x;
+        x = x - (powerT(p, x) - a) * divT(p*x);
+        iteration++;
+    }
+    return x;
+}
