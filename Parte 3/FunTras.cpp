@@ -116,3 +116,34 @@ double funTras::sinT(double a)
     return value;
 }
 
+double funTras::cosT(int a)
+{
+    int iteration = 0;
+    double antValue = 10;
+    double value = 0;
+    while (!((abs(value - antValue)) < funTras::TOLERANCE) && iteration < funTras::MAXITERATION)
+    {
+        antValue = value;
+        double term = pow(-1, iteration) * pow(a, 2*iteration) * funTras::divT(factorial(2*iteration));
+        value += term;
+
+        iteration++;
+    }
+    return value;
+}
+
+double funTras::cosT(double a)
+{
+    int iteration = 0;
+    double antValue = 10;
+    double value = 0;
+    while (!((abs(value - antValue)) < funTras::TOLERANCE) && iteration < funTras::MAXITERATION)
+    {
+        antValue = value;
+        double term = pow(-1, iteration) * pow(a, 2*iteration) * funTras::divT(factorial(2*iteration));
+        value += term;
+
+        iteration++;
+    }
+    return value;
+}

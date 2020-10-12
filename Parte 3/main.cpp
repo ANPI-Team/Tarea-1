@@ -29,6 +29,9 @@ int main(int argc, const char * argv[]) {
     double valueSin = funTras::sinT(3.145/2);
     std::cout << valueSin <<std::endl;
     
+    std::cout << "CosT" <<std::endl;
+    double valueCos = funTras::cosT(0);
+    std::cout << valueCos <<std::endl;
     
     
     
