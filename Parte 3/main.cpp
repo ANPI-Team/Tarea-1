@@ -48,5 +48,10 @@ int main(int argc, const char * argv[]) {
     std::cout << "Sqr" <<std::endl;
     double valueSqr = funTras::sqrtT(4);
     std::cout << valueSqr <<std::endl;
+    
+    std::cout << "Ln" << std::endl;
+    double valueLn = funTras::lnT(2);
+    std::cout << valueLn << std::endl;
+    
     return 0;
 }

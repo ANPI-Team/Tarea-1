@@ -43,6 +43,9 @@ public:
     
     static double sqrtT(int x);
     static double sqrtT(double x);
+    
+    static double lnT(int x);
+    static double lnT(double x);
 };
 
 #endif /* FunTras_hpp */

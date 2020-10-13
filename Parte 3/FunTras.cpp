@@ -228,3 +228,37 @@ double funTras::sqrtT(double x)
 {
     return funTras::rootT(x, 2);
 }
+
+double funTras::lnT(int a)
+{
+    int iteration = 0;
+    double antValue = 10;
+    double value = 0;
+    while (!((abs(value - antValue)) < funTras::TOLERANCE) && iteration < funTras::MAXITERATION)
+    {
+        antValue = value;
+        double term = funTras::divT(2 * iteration + 1) * funTras::powerT(2 * iteration, (a - 1) * funTras::divT(a + 1));
+        std::cout << term << std::endl;
+        value += term;
+
+        iteration++;
+    }
+    return 2 * (a-1) * funTras::divT(a+1) * value;
+}
+
+double funTras::lnT(double a)
+{
+    int iteration = 0;
+    double antValue = 10;
+    double value = 0;
+    while (!((abs(value - antValue)) < funTras::TOLERANCE) && iteration < funTras::MAXITERATION)
+    {
+        antValue = value;
+        double term = funTras::divT(2 * iteration + 1) * funTras::powerT(2 * iteration, (a - 1) * funTras::divT(a + 1));
+        std::cout << term << std::endl;
+        value += term;
+
+        iteration++;
+    }
+    return 2 * (a-1) * funTras::divT(a+1) * value;
+}
