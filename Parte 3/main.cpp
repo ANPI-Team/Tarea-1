@@ -53,5 +53,9 @@ int main(int argc, const char * argv[]) {
     double valueLn = funTras::lnT(2);
     std::cout << valueLn << std::endl;
     
+    std::cout << "Log" << std::endl;
+    double valueLog = funTras::logT(2, 2);
+    std::cout << valueLog << std::endl;
+    
     return 0;
 }

@@ -46,6 +46,11 @@ public:
     
     static double lnT(int x);
     static double lnT(double x);
+    
+    static double logT(int x, int a);
+    static double logT(double x, int a);
+    static double logT(double x, double a);
+    static double logT(int x, double a);
 };
 
 #endif /* FunTras_hpp */

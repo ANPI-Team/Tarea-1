@@ -238,7 +238,6 @@ double funTras::lnT(int a)
     {
         antValue = value;
         double term = funTras::divT(2 * iteration + 1) * funTras::powerT(2 * iteration, (a - 1) * funTras::divT(a + 1));
-        std::cout << term << std::endl;
         value += term;
 
         iteration++;
@@ -255,10 +254,29 @@ double funTras::lnT(double a)
     {
         antValue = value;
         double term = funTras::divT(2 * iteration + 1) * funTras::powerT(2 * iteration, (a - 1) * funTras::divT(a + 1));
-        std::cout << term << std::endl;
         value += term;
 
         iteration++;
     }
     return 2 * (a-1) * funTras::divT(a+1) * value;
+}
+
+double funTras::logT(int x, int a)
+{
+    return funTras::lnT(x) * funTras::divT(funTras::lnT(a));
+}
+
+double funTras::logT(double x, int a)
+{
+    return funTras::lnT(x) * funTras::divT(funTras::lnT(a));
+}
+
+double funTras::logT(int x, double a)
+{
+    return funTras::lnT(x) * funTras::divT(funTras::lnT(a));
+}
+
+double funTras::logT(double x, double a)
+{
+    return funTras::lnT(x) * funTras::divT(funTras::lnT(a));
 }
