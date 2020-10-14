@@ -7,7 +7,7 @@
 class funTras
 {
 private:
-    static constexpr double TOLERANCE = 0.00000001;
+    static constexpr double TOLERANCE = 10e-8;
     static const int MAXITERATION = 2500;
     static constexpr double EPS = 0.000000000000002204;
     
@@ -15,6 +15,9 @@ private:
     static double divTInitialValue(unsigned long long a);
     static double divTInitialValue(double a);
     
+    static double abs(double x);
+    static int abs(int x);
+    static unsigned long long abs(unsigned long long x);
     
 public:
     static unsigned long long factorial(int n);
