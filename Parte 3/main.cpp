@@ -85,5 +85,9 @@ int main(int argc, const char * argv[]) {
     std::cout << "TanH" << std::endl;
     double valueTanH = funTras::tanhT(1);
     std::cout << valueTanH << std::endl;
+    
+    std::cout << "Function" << std::endl;
+    std::cout << funTras::rootT(funTras::sinT(3 * funTras::divT(7)) + funTras::lnT(2), 3) * funTras::divT(funTras::sinhT(sqrt(2))) + funTras::atanT(exp(-1)) << std::endl;
+    
     return 0;
 }

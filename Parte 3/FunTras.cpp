@@ -431,8 +431,7 @@ double funTras::atanT(double x)
         antValue = value;
         double term = funTras::powerT(iteration, -1) * funTras::powerT(2 * iteration + 1, x) * funTras::divT(2 * iteration + 1);
         value += term;
-
-        std::cout << iteration << std::endl;
+        
         iteration++;
     }
     return value;
