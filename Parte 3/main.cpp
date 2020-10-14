@@ -66,9 +66,9 @@ int main(int argc, const char * argv[]) {
     std::cout << valueLog << std::endl;
     
     std::cout << "ArcSin" << std::endl;
-    // double valueAsin = funTras::asinT(1);
-    // std::cout << valueAsin << std::endl;
-    std::cout << "Not Working jeje" << std::endl;
+    double valueAsin = funTras::asinT(1);
+    std::cout << valueAsin << std::endl;
+    // std::cout << "Not Working jeje" << std::endl;
     
     std::cout << "ArcTan" << std::endl;
     double valueAtan = funTras::atanT(1);
