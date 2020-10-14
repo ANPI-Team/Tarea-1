@@ -517,3 +517,13 @@ double funTras::coshT(double a)
     }
     return value;
 }
+
+double funTras::tanhT(int a)
+{
+    return funTras::sinhT(a) * funTras::divT(funTras::coshT(a));
+}
+
+double funTras::tanhT(double a)
+{
+    return funTras::sinhT(a) * funTras::divT(funTras::coshT(a));
+}

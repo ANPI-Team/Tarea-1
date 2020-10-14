@@ -83,7 +83,7 @@ int main(int argc, const char * argv[]) {
     std::cout << valueCosH << std::endl;
     
     std::cout << "TanH" << std::endl;
-    double valueTanH = funTras::atanT(1);
+    double valueTanH = funTras::tanhT(1);
     std::cout << valueTanH << std::endl;
     return 0;
 }
