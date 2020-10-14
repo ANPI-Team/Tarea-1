@@ -79,7 +79,7 @@ int main(int argc, const char * argv[]) {
     std::cout << valueSinH << std::endl;
     
     std::cout << "CosH" << std::endl;
-    double valueCosH = funTras::atanT(1);
+    double valueCosH = funTras::coshT(1);
     std::cout << valueCosH << std::endl;
     
     std::cout << "TanH" << std::endl;

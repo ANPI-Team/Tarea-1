@@ -485,3 +485,35 @@ double funTras::sinhT(double a)
     }
     return value;
 }
+
+double funTras::coshT(int a)
+{
+    int iteration = 0;
+    double antValue = 10;
+    double value = 0;
+    while (!((abs(value - antValue)) < funTras::TOLERANCE) && iteration < funTras::MAXITERATION)
+    {
+        antValue = value;
+        double term = funTras::powerT(2 * iteration, a) * funTras::divT(funTras::factorial(2 * iteration));
+        value += term;
+
+        iteration++;
+    }
+    return value;
+}
+
+double funTras::coshT(double a)
+{
+    int iteration = 0;
+    double antValue = 10;
+    double value = 0;
+    while (!((abs(value - antValue)) < funTras::TOLERANCE) && iteration < funTras::MAXITERATION)
+    {
+        antValue = value;
+        double term = funTras::powerT(2 * iteration, a) * funTras::divT(funTras::factorial(2 * iteration));
+        value += term;
+
+        iteration++;
+    }
+    return value;
+}
