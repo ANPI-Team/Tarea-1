@@ -11,13 +11,17 @@ private:
     static const int MAXITERATION = 2500;
     static constexpr double EPS = 0.000000000000002204;
     
+    static double divTInitialValue(int a);
     static double divTInitialValue(unsigned long long a);
-    
+    static double divTInitialValue(double a);
     
     
 public:
     static unsigned long long factorial(int n);
+    
     static double divT(unsigned long long a);
+    static double divT(int a);
+    static double divT(double a);
 
     static double expT(double x);
     static double expT(int x);
@@ -51,6 +55,12 @@ public:
     static double logT(double x, int a);
     static double logT(double x, double a);
     static double logT(int x, double a);
+    
+    static double asinT(int x);
+    static double asinT(double x);
+    
+    static double atanT(int x);
+    static double atanT(double x);
 };
 
 #endif /* FunTras_hpp */

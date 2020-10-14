@@ -20,6 +20,8 @@ int main(int argc, const char * argv[]) {
     std::cout << "DivT" <<std::endl;
     double valueDiv = funTras::divT(3);
     std::cout << valueDiv <<std::endl;
+    double valueDiv2 = funTras::divT(0.5);
+    std::cout << valueDiv2 <<std::endl;
     
     std::cout << "ExpT" <<std::endl;
     double valueExp = funTras::expT(3);
@@ -38,8 +40,14 @@ int main(int argc, const char * argv[]) {
     std::cout << valueTan <<std::endl;
     
     std::cout << "Pw" <<std::endl;
-    double valuePw = funTras::powerT(0, 20);
+    double valuePw = funTras::powerT(4, 2);
     std::cout << valuePw <<std::endl;
+    double valuePw2 = funTras::powerT(4, 1.5);
+    std::cout << valuePw2 <<std::endl;
+    double valuePw3 = funTras::powerT(1.5, 2);
+    std::cout << valuePw3 <<std::endl;
+    double valuePw4 = funTras::powerT(1.5, 1.5);
+    std::cout << valuePw4 <<std::endl;
     
     std::cout << "Root" <<std::endl;
     double valueRoot = funTras::rootT(4, 2);
@@ -56,6 +64,17 @@ int main(int argc, const char * argv[]) {
     std::cout << "Log" << std::endl;
     double valueLog = funTras::logT(2, 2);
     std::cout << valueLog << std::endl;
+    
+    std::cout << "ArcSin" << std::endl;
+    // double valueAsin = funTras::asinT(1);
+    // std::cout << valueAsin << std::endl;
+    std::cout << "Not Working jeje" << std::endl;
+    
+    std::cout << "ArcTan" << std::endl;
+    double valueAtan = funTras::atanT(1);
+    std::cout << valueAtan << std::endl;
+    
+    
     
     return 0;
 }
