@@ -74,7 +74,16 @@ int main(int argc, const char * argv[]) {
     double valueAtan = funTras::atanT(1);
     std::cout << valueAtan << std::endl;
     
+    std::cout << "SinH" << std::endl;
+    double valueSinH = funTras::sinhT(1);
+    std::cout << valueSinH << std::endl;
     
+    std::cout << "CosH" << std::endl;
+    double valueCosH = funTras::atanT(1);
+    std::cout << valueCosH << std::endl;
     
+    std::cout << "TanH" << std::endl;
+    double valueTanH = funTras::atanT(1);
+    std::cout << valueTanH << std::endl;
     return 0;
 }

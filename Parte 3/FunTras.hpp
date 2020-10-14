@@ -61,6 +61,15 @@ public:
     
     static double atanT(int x);
     static double atanT(double x);
+    
+    static double sinhT(int x);
+    static double sinhT(double x);
+    
+    static double coshT(int x);
+    static double coshT(double x);
+    
+    static double tanhT(int x);
+    static double tanhT(double x);
 };
 
 #endif /* FunTras_hpp */
