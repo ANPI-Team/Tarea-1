@@ -38,5 +38,8 @@ result = tanh_t(10)
 disp("asin_t(pi/4)");
 result = asin_t(pi/4)
 
+disp("power_t(2,10)");
+result = power_t(2,10)
+
 disp("atan_t(1)");
 result = atan_t(1)
