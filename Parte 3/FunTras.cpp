@@ -1,6 +1,28 @@
 #include "FunTras.hpp"
 #include <iostream>
 
+int funTras::negativeMultiplier(unsigned long long a)
+{
+    if (a > 0)
+        return 1;
+    else
+        return -1;
+}
+int funTras::negativeMultiplier(int a)
+{
+    if (a > 0)
+        return 1;
+    else
+        return -1;
+}
+int funTras::negativeMultiplier(double a)
+{
+    if (a > 0)
+        return 1;
+    else
+        return -1;
+}
+
 double funTras::abs(double x)
 {
     if(x < 0)
@@ -32,50 +54,54 @@ unsigned long long funTras::factorial(int n)
 
 double funTras::divT(unsigned long long a)
 {
-    double x = funTras::divTInitialValue(a);
-    double xNext = x * (2 - a * x);;
+    unsigned long long newA = abs(a);
+    double x = funTras::divTInitialValue(newA);
+    double xNext = x * (2 - newA * x);;
     int iteration = 1;
     
     while(!(funTras::abs((xNext - x)/xNext) < funTras::TOLERANCE) || iteration < funTras::MAXITERATION)
     {
         double temp = xNext;
-        xNext = x * (2 - a * x);
+        xNext = x * (2 - newA * x);
         x = temp;
         iteration++;
     }
-    return xNext;
+    return  funTras::negativeMultiplier(a) * xNext;
 }
 
 double funTras::divT(int a)
 {
-    double x = funTras::divTInitialValue(a);
-    double xNext = x * (2 - a * x);;
+    
+    unsigned long long newA = abs(a);
+    double x = funTras::divTInitialValue(newA);
+    double xNext = x * (2 - newA * x);;
     int iteration = 1;
     
     while(!(funTras::abs((xNext - x)/xNext) < funTras::TOLERANCE) || iteration < funTras::MAXITERATION)
     {
         double temp = xNext;
-        xNext = x * (2 - a * x);
+        xNext = x * (2 - newA * x);
         x = temp;
         iteration++;
     }
-    return xNext;
+    return  funTras::negativeMultiplier(a) * xNext;
 }
 
 double funTras::divT(double a)
 {
-    double x = funTras::divTInitialValue(a);
-    double xNext = x * (2 - a * x);;
+    unsigned long long newA = abs(a);
+    double x = funTras::divTInitialValue(newA);
+    double xNext = x * (2 - newA * x);;
     int iteration = 1;
     
     while(!(funTras::abs((xNext - x)/xNext) < funTras::TOLERANCE) || iteration < funTras::MAXITERATION)
     {
         double temp = xNext;
-        xNext = x * (2 - a * x);
+        xNext = x * (2 - newA * x);
         x = temp;
         iteration++;
     }
-    return xNext;
+    return  funTras::negativeMultiplier(a) * xNext;
 }
 
 double funTras::divTInitialValue(double a)

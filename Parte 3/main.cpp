@@ -16,7 +16,6 @@ int main(int argc, const char * argv[]) {
     double valueFct = funTras::factorial(5);
     std::cout << valueFct <<std::endl;
     
-    
     std::cout << "DivT" <<std::endl;
     double valueDiv = funTras::divT(10);
     std::cout << valueDiv <<std::endl;
@@ -50,7 +49,7 @@ int main(int argc, const char * argv[]) {
     std::cout << valuePw4 <<std::endl;
     
     std::cout << "Root" <<std::endl;
-    double valueRoot = funTras::rootT(4, 2);
+    double valueRoot = funTras::rootT(8, 2);
     std::cout << valueRoot <<std::endl;
     
     std::cout << "Sqr" <<std::endl;

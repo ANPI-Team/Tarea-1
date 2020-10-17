@@ -19,6 +19,10 @@ private:
     static int abs(int x);
     static unsigned long long abs(unsigned long long x);
     
+    static int negativeMultiplier(unsigned long long a);
+    static int negativeMultiplier(int a);
+    static int negativeMultiplier(double a);
+    
 public:
     static unsigned long long factorial(int n);
     
