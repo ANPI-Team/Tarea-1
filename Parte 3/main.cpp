@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
     
     
     std::cout << "DivT" <<std::endl;
-    double valueDiv = funTras::divT(3);
+    double valueDiv = funTras::divT(10);
     std::cout << valueDiv <<std::endl;
     double valueDiv2 = funTras::divT(0.5);
     std::cout << valueDiv2 <<std::endl;
@@ -66,9 +66,9 @@ int main(int argc, const char * argv[]) {
     std::cout << valueLog << std::endl;
     
     std::cout << "ArcSin" << std::endl;
-    // double valueAsin = funTras::asinT(1);
-    // std::cout << valueAsin << std::endl;
-    std::cout << "Not Working jeje" << std::endl;
+    double valueAsin = funTras::asinT(1);
+    std::cout << valueAsin << std::endl;
+    // std::cout << "Not Working jeje" << std::endl;
     
     std::cout << "ArcTan" << std::endl;
     double valueAtan = funTras::atanT(1);
