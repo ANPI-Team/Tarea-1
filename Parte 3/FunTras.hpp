@@ -42,7 +42,7 @@ public:
     static double powerT(int x, double a);
     static double powerT(double x, int a);
     static double powerT(int x, int a);
-    static double powerT(int x, unsigned long long a);
+    static unsigned long long powerT(int x, unsigned long long a);
     
     static double rootT(int x, int a);
     static double rootT(double x, int a);
