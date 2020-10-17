@@ -266,7 +266,7 @@ double funTras::powerT(double x, double a)
     return funTras::powerT(intX, a) * funTras::rootT(a, p);
 }
 
-double funTras::powerT(int x, unsigned long long a)
+unsigned long long funTras::powerT(int x, unsigned long long a)
 {
     unsigned long long value = 1;
     while(x > 0)
@@ -403,28 +403,13 @@ double funTras::asinT(int x)
     double value = 0;
     while (!((funTras::abs(value - antValue)) < funTras::TOLERANCE) && iteration < funTras::MAXITERATION)
     {
-        std::cout << "Iteration: " << iteration << std::endl;
         antValue = value;
-        
-        std::cout << "Term 1";
         double term1 = funTras::factorial(2*iteration);
-        std::cout << ": " << term1 << std::endl;
-        
-        std::cout << "Term 2";
         double term2 = funTras::divT(funTras::powerT(iteration, 4));
-        std::cout << ": " << term1 << std::endl;
-        
-        std::cout << "Term 3";
         double term3 = funTras::divT(funTras::powerT(2, funTras::factorial(iteration)));
-        std::cout << ": " << term1 << std::endl;
-        
-        std::cout << "Term 4";
         double term4 = funTras::divT(2*iteration+1);
-        std::cout << ": " << term1 << std::endl;
-        
-        std::cout << "Term 5";
         double term5 = funTras::powerT(2*iteration+1, x);
-        std::cout << ": " << term5 << std::endl;
+
         value += term1 * term2 * term3 * term4 * term5;
         
         iteration++;
