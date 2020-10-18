@@ -1,3 +1,5 @@
+#Dado que los valores calculados llegana un numero muy grande, hace que se vuelvan infintos, a partir del calculo de pi/3.
+#Esto se da por el soporte que posee octave haciendo que las iteraciones son muchas por lo que el valor aproximado se dispara increiblemente.
 function xAprox = asin_t(a)
     if(isinteger(a) !=1) 
         if(abs(a) > (pi/2))
