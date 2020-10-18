@@ -1,9 +1,11 @@
-PARTE 2
+#PARTE 2
 
 Para ejecutar las pruebas realizadas en el ejercicio 2 para los algoritmos del ejercicio 1 ejecute el siguiente comando:
-
-\$ make
+```bash
+make
+```
 
 Para eliminar los archivos generados ejecute:
-
-\$ make clean
+```bash
+make clean
+```
