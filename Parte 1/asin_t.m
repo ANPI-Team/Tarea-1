@@ -6,7 +6,7 @@ function xAprox = asin_t(a)
         else
             tmpX=0;
             iteration = 0;
-            xAprox = ((factorial(2*iteration))*div_t((4^iteration)*((factorial(iteration))^2)*(2*iteration+1)))*(a^(2*iteration+1));
+            xAprox = ((factorial(2*iteration))*(a^(2*iteration+1)))*(div_t((4^iteration)*((factorial(iteration))^2)*(2*iteration+1)));
             tmpAprox = 0;
             iteration =1;
             tol = 10^-8;
@@ -16,7 +16,7 @@ function xAprox = asin_t(a)
                 if(iteration>=25000)
                     break;
                 else 
-                    tmpX = ((factorial(2*iteration))*div_t((4^iteration)*((factorial(iteration))^2)*(2*iteration+1)))*(a^(2*iteration+1));
+                    tmpX = ((factorial(2*iteration))*(a^(2*iteration+1)))*(div_t((4^iteration)*((factorial(iteration))^2)*(2*iteration+1)));
                     xAprox = xAprox + tmpX;
                     iteration++;
                 endif
