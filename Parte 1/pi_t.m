@@ -6,7 +6,7 @@ function retval = pi_t ()
     k = 0; 
     error = tol + 1;
     while (error > tol ) & (k <= iterMax)
-        mypi= mypi+ (4*((-1)^k))/(2*k + 1); 
+        mypi= mypi+ (4*((-1)^k))*div_t((2*k + 1)); 
         error = abs(mypi-pi);
         k++; 
     end
