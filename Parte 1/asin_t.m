@@ -2,7 +2,7 @@
 #Esto se da por el soporte que posee octave haciendo que las iteraciones son muchas por lo que el valor aproximado se dispara increiblemente.
 function xAprox = asin_t(a)
     if(isinteger(a) !=1) 
-        if(abs(a) > (pi/2))
+        if(abs(a) > (pi_t()/2))
             disp("El valor debe estar dentro del codominio: ]-pi/2, pi/2[")
             return
         else
