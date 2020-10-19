@@ -1,4 +1,5 @@
 from sympy import *
+from sympy.parsing.sympy_parser import parse_expr
 import sympy
 
 def newton_H_m1(f, x0: float, tol: float, iterMax: int):
@@ -45,27 +46,13 @@ def newton_H_m1(f, x0: float, tol: float, iterMax: int):
 
     return (x, error)
 
-
-
-def f():
-    """Este método convierte la función que se genera en fun() 
-        en string para luego poder parsearla y enviarla al metodo de Newton-Raphson.
-    """
-    fx = str(fun())
-    f = parse_expr(fx)
-    return f
-
-
-
-
 def fun():
     """Función donde se definen las constantes, y se generan algunas operaciones 
-        que al calcularlas son constantes, además de contruir las funciones 
-        dependientes de la variable.
+    que al calcularlas son constantes, además de contruir las funciones 
+    dependientes de la variable.
 
     No recibe parámetros ya que esta función construye la función 
     """
-    
     xk          = symbols("xk")
     citaDB      = 4 
     alpha       = 4        
@@ -83,6 +70,10 @@ def fun():
     F          = (log(x1/xk))/(citaR2*ln(10)) + diff(x2-xk, xk)/citaC2
     return F
 
+def main():
+    (aprox, error) = newton_H_m1(fun(), 5, 10 ** -5, 100)
+    print("\nCalculo de la distancia entre dos sensores por medio del metodo aproximacion Newton Raphson \n")
+    print("     Aproximacion   --   " + str(aprox) + "\n")
+    print("     Error          --   " + str(error) + "\n")
 
-
-newton_H_m1(f(), 5, 10 ** -5, 100)
+main()
