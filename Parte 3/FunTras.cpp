@@ -89,7 +89,7 @@ double funTras::divT(int a)
 
 double funTras::divT(double a)
 {
-    unsigned long long newA = abs(a);
+    double newA = abs(a);
     double x = funTras::divTInitialValue(newA);
     double xNext = x * (2 - newA * x);;
     int iteration = 1;
